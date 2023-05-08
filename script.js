@@ -116,4 +116,18 @@ const calcAverage = (game1, game2, game3) => {
     return averageScore
 }
 
-console.log(calcAverage(2, 2, 2))
+const avgDolphins = calcAverage(85, 54, 41);
+console.log(avgDolphins);
+
+const avgKoalas = calcAverage(85, 54, 41);
+console.log(avgKoalas);
+
+function checkWinner(avgDolphins, avgKoalas) {
+    if (avgDolphins >= 2 * avgKoalas) {
+        return console.log(`Dolphins win (${avgDolphins} vs ${avgKoalas})`);
+    } else if (avgKoalas >= 2 * avgDolphins) {
+        return console.log(`Koalas win (${avgKoalas} vs ${avgDolphins})`);
+    }
+}
+
+console.log(checkWinner(avgDolphins, avgKoalas));
