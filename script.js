@@ -109,7 +109,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
 
-*/
+
 
 //Coding challenge #1
 
@@ -135,3 +135,24 @@ function checkWinner(avgDolphins, avgKoalas) {
 }
 
 console.log(checkWinner(avgDolphins, avgKoalas));
+
+*/
+
+const friend1 = 'Michael'
+const friend2 = 'steven'
+const friend3 = 'Peter'
+
+const friends = ['Michal', 'Steven', 'Peter']
+console.log(friends);
+
+//this version is a function 
+const years = new Array(1991, 1984, 2008, 2020);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+
+
