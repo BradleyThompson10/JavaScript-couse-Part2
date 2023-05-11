@@ -146,13 +146,40 @@ const friends = ['Michal', 'Steven', 'Peter']
 console.log(friends);
 
 //this version is a function 
-const years = new Array(1991, 1984, 2008, 2020);
+const y = new Array(1991, 1984, 2008, 2020);
 
 console.log(friends[0]);
 console.log(friends[2]);
 
 console.log(friends.length);
 console.log(friends[friends.length - 1]);
+
+//changing or mutating an arry 
+friends[2] = 'Jay';
+console.log(friends);
+// friends = ['Bob', Alice]   // this doesnt work
+
+const firstName = 'Jonas'
+const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+console.log(jonas)
+
+// Exercise
+
+const calcAge = function (birthYear) {
+    return 2037 - birthYear
+}
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[4]);
+console.log(age1, age2, age3)
+
+console.table(years) // better way of logging an array to the console
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(years[3]), calcAge(years[4])]
+console.log(ages)
+
 
 
 
