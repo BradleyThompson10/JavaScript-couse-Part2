@@ -221,7 +221,7 @@ if (friends.includes('Steven')) {
 
 //Codding Challenge #2
 
-function calcTip(bill) {
+const calcTip = function (bill) {
     let tip
     (bill >= 50) && (bill <= 300) ? tip = bill * 0.15 : tip = bill * 0.20;
     return tip
