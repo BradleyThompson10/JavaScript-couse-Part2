@@ -136,7 +136,7 @@ function checkWinner(avgDolphins, avgKoalas) {
 
 console.log(checkWinner(avgDolphins, avgKoalas));
 
-*/
+
 
 const friend1 = 'Michael'
 const friend2 = 'steven'
@@ -179,6 +179,54 @@ console.table(years) // better way of logging an array to the console
 
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(years[3]), calcAge(years[4])]
 console.log(ages)
+
+*/
+
+const friends = ['Michal', 'Steven', 'Peter']
+const newLength = friends.push('Jay')
+console.table(newLength)
+
+// Push method
+// friends.push('Jay');
+// console.log(friends);
+// console.table(friends);
+
+//unshift method
+friends.unshift('John');
+console.table(friends);
+
+//pop Method
+friends.pop();
+const popped = friends.pop();
+console.log(popped);
+console.table(friends);
+
+//shift method
+friends.shift();
+console.table(friends);
+
+console.log(friends.indexOf('Steven'));
+
+friends.push(23);
+console.log(friends.includes('23'));
+console.log(friends.includes(23));
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Bob'));
+
+if (friends.includes('Steven')) {
+    console.log('you have a friend called Steven')
+}
+
+//Codding Challenge #2
+
+const bill = 275;
+let tip;
+
+(bill >= 50) && (bill <= 300) ? tip = bill * 0.15 : tip = bill * 0.20
+
+let totalCost = bill + tip;
+
+console.log(`the Bill was ${bill}, the tip was ${tip}, Total Cost is ${totalCost}`);
 
 
 
