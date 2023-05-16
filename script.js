@@ -180,7 +180,7 @@ console.table(years) // better way of logging an array to the console
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(years[3]), calcAge(years[4])]
 console.log(ages)
 
-*/
+
 
 const friends = ['Michal', 'Steven', 'Peter']
 const newLength = friends.push('Jay')
@@ -217,16 +217,40 @@ if (friends.includes('Steven')) {
     console.log('you have a friend called Steven')
 }
 
+*/
+
 //Codding Challenge #2
 
-const bill = 275;
-let tip;
+function calcTip(bill) {
+    let tip
+    (bill >= 50) && (bill <= 300) ? tip = bill * 0.15 : tip = bill * 0.20;
+    return tip
+}
 
-(bill >= 50) && (bill <= 300) ? tip = bill * 0.15 : tip = bill * 0.20
+console.log(calcTip(100));
 
-let totalCost = bill + tip;
+const bills = [125, 555, 44];
 
-console.log(`the Bill was ${bill}, the tip was ${tip}, Total Cost is ${totalCost}`);
+const tip1 = calcTip(bills[0]);
+const tip2 = calcTip(bills[1]);
+const tip3 = calcTip(bills[bills.length - 1]);
+console.log(tip1)
+console.log(tip2)
+console.log(tip3)
+
+const tips = [tip1, tip2, tip3]
+
+const totalBill1 = (bills[0] + tips[0]);
+const totalBill2 = (bills[1] + tips[1]);
+const totalBill3 = (bills[bills.length - 1] + tips[tips.length - 1]);
+
+const total = [totalBill1, totalBill2, totalBill3]
+console.table(total)
+
+
+
+
+
 
 
 
