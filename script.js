@@ -231,27 +231,13 @@ console.log(calcTip(100));
 
 const bills = [125, 555, 44];
 
-const tip1 = calcTip(bills[0]);
-const tip2 = calcTip(bills[1]);
-const tip3 = calcTip(bills[bills.length - 1]);
-console.log(tip1)
-console.log(tip2)
-console.log(tip3)
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[bills.length - 1]),]
 
-const tips = [tip1, tip2, tip3]
+console.table(tips)
 
-const totalBill1 = (bills[0] + tips[0]);
-const totalBill2 = (bills[1] + tips[1]);
-const totalBill3 = (bills[bills.length - 1] + tips[tips.length - 1]);
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[bills.length - 1] + tips[tips.length - 1]];
 
-const total = [totalBill1, totalBill2, totalBill3]
-console.table(total)
-
-
-
-
-
-
+console.table(totals)
 
 
 
