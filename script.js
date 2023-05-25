@@ -27,7 +27,7 @@ function fruitProcessor(apples, oranges) {
     return juice;
 }
 
-//the values (5, 0) are called the arguments 
+//the values (5, 0) are called the arguments
 //fruitProcessor(5, 0);
 
 const appleJuice = fruitProcessor(5, 0);
@@ -145,7 +145,7 @@ const friend3 = 'Peter'
 const friends = ['Michal', 'Steven', 'Peter']
 console.log(friends);
 
-//this version is a function 
+//this version is a function
 const y = new Array(1991, 1984, 2008, 2020);
 
 console.log(friends[0]);
@@ -154,7 +154,7 @@ console.log(friends[2]);
 console.log(friends.length);
 console.log(friends[friends.length - 1]);
 
-//changing or mutating an arry 
+//changing or mutating an arry
 friends[2] = 'Jay';
 console.log(friends);
 // friends = ['Bob', Alice]   // this doesnt work
@@ -286,7 +286,7 @@ console.table(jonas);
 
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`)
 
-*/
+
 
 const jonas = {
     firstName: 'Jonas',
@@ -296,10 +296,70 @@ const jonas = {
     friends: ['Michael', 'Peter', 'Steven'],
     hasDriversLicense: true,
 
-    calcAge: function (birthYear) {
-        return 2037 - birthYear;
+    //     calcAge: function (birthYear) {
+    //         return 2037 - birthYear;
+    //     }
+    // };
+
+    // calcAge: function () {
+    //     console.log(this);
+    //     return 2037 - this.birthYear;
+    // }
+
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()} year old ${this.job} and he has ${this.hasDriversLicense = true ? 'a' : 'no'} driver's license`
+
+    }
+}
+
+console.log(jonas.calcAge());
+console.log(jonas.age);
+
+//Challenge
+//"Jonas is a 40-year old teacher, and he has a driver's license"
+//"Jonas is a 40-year old teacher, and he has no driver's license"
+console.log(jonas.getSummary());
+
+*/
+
+//Coding Challenge #3
+
+const mark = {
+    fullName: "Mark Miler",
+    weight: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.weight / this.height ** 2
+        return this.bmi;
     }
 };
 
-console.log(jonas.calcAge(1991));
-console.log(jonas['calcAge'](1991));
+console.table(mark);
+console.log(mark.calcBMI());
+console.log(mark.bmi);
+
+const john = {
+    fullName: "John Smith",
+    weight: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.weight / this.height ** 2
+        return this.bmi;
+    }
+};
+
+console.table(john);
+console.log(john.calcBMI());
+console.log(john.bmi);
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`)
+} else if (john.bmi > mark.bmi) {
+    console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI ${mark.bmi}`)
+};
+
