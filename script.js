@@ -372,6 +372,6 @@ if (mark.bmi > john.bmi) {
 // console.log('lifting weights repetition 4');
 // console.log('lifting weights repetition 5');
 
-for (let rep = 1; rep <= 10; rep = rep++) {
+for (let rep = 1; rep <= 10; rep++) {
     console.log('lifting weights repetition 1');
 }
