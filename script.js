@@ -325,7 +325,7 @@ console.log(jonas.age);
 //"Jonas is a 40-year old teacher, and he has no driver's license"
 console.log(jonas.getSummary());
 
-*/
+
 
 //Coding Challenge #3
 
@@ -363,3 +363,15 @@ if (mark.bmi > john.bmi) {
     console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI ${mark.bmi}`)
 };
 
+*/
+
+//example of inefficient code that the loop will fix
+// console.log('lifting weights repetition 1');
+// console.log('lifting weights repetition 2');
+// console.log('lifting weights repetition 3');
+// console.log('lifting weights repetition 4');
+// console.log('lifting weights repetition 5');
+
+for (let rep = 1; rep <= 10; rep = rep++) {
+    console.log('lifting weights repetition 1');
+}
