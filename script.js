@@ -425,7 +425,7 @@ for (let i = 0; i < jonas.length; i++) {
     console.log(jonas[i], typeof jonas[i]);
 }
 
-*/
+
 
 const jonas = [
     'Jonas',
@@ -433,6 +433,41 @@ const jonas = [
     2037 - 1991,
     "teacher",
     ['Michael', 'Peter', 'Steven'],
+    true
 ];
 
+//looping backwards 5,4,3,2,1,0
 
+for (let i = jonas.length - 1; i >= 0; i--) {
+    console.log(i, jonas[i]);
+}
+
+//loop inside of a loop
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`---Starting exercise ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise ${exercise}: Lifting weights repetition ${rep}`);
+    }
+}
+
+*/
+
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`lifting weights repetition ${rep}`);
+// }
+
+let rep = 1
+while (rep <= 10) {
+    console.log(`WHILE: lifting weights repetition ${rep}`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1
+
+while (dice !== 6) {
+    console.log(`you rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1
+    if (dice === 6) console.log('Loop is about to end...');
+}
