@@ -390,10 +390,10 @@ const jonas = [
 const types = [];
 
 for (let i = 0; i < jonas.length; i++) {
-    // Reading from jonas array 
+    // Reading from jonas array
     console.log(jonas[i], typeof jonas[i]);
 
-    // Filling types array 
+    // Filling types array
     // types[i] = typeof jonas[i];
     types.push(typeof jonas[i]);
 }
@@ -452,7 +452,7 @@ for (let exercise = 1; exercise < 4; exercise++) {
     }
 }
 
-*/
+
 
 // for (let rep = 1; rep <= 10; rep++) {
 //     console.log(`lifting weights repetition ${rep}`);
@@ -471,3 +471,38 @@ while (dice !== 6) {
     dice = Math.trunc(Math.random() * 6) + 1
     if (dice === 6) console.log('Loop is about to end...');
 }
+
+*/
+
+//Coding Challenge 4
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [
+    22,
+    295,
+    176,
+    440,
+    37,
+    105,
+    10,
+    1100,
+    86,
+    52
+]
+
+console.table(bills)
+
+let tips = []
+let totals = []
+
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(bills[i] + tips[i]);
+}
+
+console.table(tips);
+console.table(totals);
+
