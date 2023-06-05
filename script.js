@@ -506,3 +506,6 @@ for (let i = 0; i < bills.length; i++) {
 console.table(tips);
 console.table(totals);
 
+//How JavaScript Works Behind the Scenes
+// Numbers, Dates, Intl and Timers
+// Advanced DOM and events
